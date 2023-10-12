@@ -14,9 +14,10 @@ const LandingPage = () => {
       <Navbar />
       <Hero />
       <About />
-      <Projects />
+      {/* <Projects /> */}
     </Box>
   )
 }
 
 export default LandingPage
+
