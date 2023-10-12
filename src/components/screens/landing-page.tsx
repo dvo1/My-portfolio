@@ -7,7 +7,10 @@ import Projects from '../features/projects';
 
 const LandingPage = () => {
   return (
-    <Box>
+    <Box sx={{
+      backgroundColor: 'var(--background)',
+      color: 'var(--white)'
+    }}>
       <Navbar />
       <Hero />
       <About />
