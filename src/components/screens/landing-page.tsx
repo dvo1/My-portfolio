@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Navbar />
       <Hero />
       <About />
-      {/* <Projects /> */}
+      <Projects />
     </Box>
   )
 }

@@ -256,6 +256,7 @@ const Hero = () => {
                             borderRadius: '27px',
                             color: 'white',
                             textTransform: 'capitalize',
+                            whiteSpace: 'noWrap',
                             '&:hover': {
                                 // backgroundColor: 'var(--orange)',
                                 borderColor: '#FF6363'

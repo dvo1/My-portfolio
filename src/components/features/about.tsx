@@ -66,7 +66,7 @@ const About = () => {
                     mb: 3,
                     
                 }}>
-                    <Typography sx={{fontWeight: 'bold', fontSize: '18px'}}>
+                    <Typography sx={{fontSize: '18px'}}>
                         About
                     </Typography>
                 </Box>
