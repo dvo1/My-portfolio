@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import duro from '../../../public/assets/duro.png'
 import sphere from '../../../public/assets/sphere.png'
+import Link from 'next/link'
 
 const Hero = () => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
@@ -78,7 +79,7 @@ const Hero = () => {
                         textAlign: 'center',
                         fontSize: '20px'
                     }}>
-                        {'const frontend = ( ) => <Front-end Developer/>'}
+                        {'const durosinmi = ( ) => <Front-end Developer/>'}
                     </Typography>
                 </motion.div >
 
@@ -239,11 +240,27 @@ const Hero = () => {
                     transform: 'translate(-50%, -50%)',
                     
                 }}>
-                    <Typography sx={{
-                        color: 'white'
-                    }}>
-                        Let&apos;s talk
-                    </Typography>
+                    <Link 
+                    href={'https://www.linkedin.com/in/durosinmi-victory/'}
+                    target='_blank'
+                    >
+                        <Button
+                        variant='contained'
+                        disableElevation
+                        disableRipple
+                        sx={{
+                            'backgroundColor': '#FF6363',
+                            'padding': '',
+                            borderColor: 'white',
+                            borderRadius: '27px',
+                            color: 'white',
+                            textTransform: 'capitalize',
+                            whiteSpace: 'noWrap',
+                        }}
+                    >
+                        Check me out on Linkedin
+                    </Button>
+                    </Link>
 
                     <Button
                         variant='outlined'

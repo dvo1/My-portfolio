@@ -16,6 +16,7 @@ const About = () => {
             mainControlTwo.start('visible')
             // slideControl.start('visible');
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isInView])
 
 
@@ -46,7 +47,7 @@ const About = () => {
             margin: 'auto',
             position: 'relative',
             my: 9
-        }} ref={ref} >
+        }} ref={ref} id="about">
             <motion.div
                 variants={motionVariantsOne}
                 initial='hidden'
@@ -95,7 +96,8 @@ const About = () => {
                     textAlign: 'justify'
                 }}>
                     Hello, I&apos;m Durosinmi Victory, <span style={{ color: ' rgba(255, 255, 255, 0.50)' }}>a
-                        passionate  <span style={{ color: '#FF6363' }}>front-end web developer </span>
+                        passionate  <span style={{ color: '#FF6363' }}>front-end engineer </span> and  
+                        <span style={{ color: '#FF6363' }}> technical writer </span>
                         with expertise in tools and technologies like React, Next Js, Redux Toolkit,
                         TypeScript, Material UI, Bootstrap, and CSS3. </span>With a solid foundation in front-end development,
                     I specialize in creating intuitive and user-friendly interfaces, developing responsive web applications,

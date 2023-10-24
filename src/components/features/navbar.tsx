@@ -13,14 +13,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+import { navItems } from '../data/nav-items';
+import Link from 'next/link';
 // interface Props {
  
 //   window?: () => Window;
 // }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+// const navItems = ['Home', 'About', 'Contact'];
 
 const Navbar = () => {
   // const { window } = props;
@@ -31,16 +32,19 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{  }}>
+      <Typography variant="h6" sx={{ my: 2, mx: 2, fontWeight: 'bold' }}>
         Duro
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton sx={{ }}>
+              <Link href={item?.path} 
+              style={{ color: '#000', }}>
+              <ListItemText primary={item?.name} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -49,7 +53,7 @@ const Navbar = () => {
   );
   // const container = window !== undefined ? () => window().document.body : undefined;
   return (
-    <Box sx={{ display: 'flex', mb: 20}}>
+    <Box sx={{ display: 'flex', mb: 10}}>
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: '#0C0D10'}}>
         <Toolbar>
@@ -70,10 +74,19 @@ const Navbar = () => {
             Duro
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff', textTransform: 'capitalize' }}>
-                {item}
+            {navItems.map((item, index) => (
+              // eslint-disable-next-line react/jsx-key
+              <Link href={item?.path}>
+              <Button key={index} sx={{ 
+                color: '#fff', 
+                textTransform: 'capitalize',
+                '&:hover': {
+                  color: 'var(--red)', 
+                },
+                }}>
+                {item?.name} 
               </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
@@ -86,7 +99,7 @@ const Navbar = () => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },

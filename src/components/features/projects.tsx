@@ -46,7 +46,10 @@ const Projects = () => {
         <Box sx={{
             width: { xs: '100%', md: '80%' },
             margin: 'auto',
-        }} ref={ref}>
+        }} 
+        ref={ref}
+        id="projects"
+        >
 
             <motion.div
                 variants={motionVariantsOne}
