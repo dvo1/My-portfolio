@@ -1,19 +1,20 @@
 import React from 'react'
-import { Box, Button, Typography, useMediaQuery } from '@mui/material'
+import { Box, Button, Typography, useMediaQuery, Grid } from '@mui/material'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import spintwo from '../../../public/assets/spintwo.png'
 import { articles } from '../data/articles'
 import ArticleCard from '../cards/article-card'
 
+
 const Articles = () => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
-   
-  return (
-    <Box>
-        <Box sx={{
-            my: 12
-        }} id = "articles">
+
+    return (
+        <Box>
+            <Box sx={{
+                my: 12
+            }} id="articles">
                 <>
                     <div
                         style={{
@@ -26,29 +27,29 @@ const Articles = () => {
                     >
                         {Array.from({ length: 20 }).map((_, index) => (
                             <React.Fragment key={index}>
-                               
-                                    <Box sx={{
-                                        display: 'flex',
-                                        alignItems: 'center'
-                                    }} >
-                                        <Typography sx={{
-                                            fontSize: { xs: '30px', md: '60px' },
-                                            whiteSpace: 'noWrap',
-                                            color: '#FFFFFF',
-                                            fontWeight: 'bold'
-                                        }}>MY ARTICLES</Typography>
-                                        <Image
-                                            src={spintwo}
-                                            alt='set'
-                                            style={{
-                                                // animation: 'rotate 9s  infinite',
-                                                marginLeft: '10px',
-                                                width: isSmallScreen ? '10%' : 'auto',
-                                                objectFit: 'contain',
-                                                marginRight: isSmallScreen ? '30px' : 'auto'
-                                            }}
-                                        />
-                                    </Box>
+
+                                <Box sx={{
+                                    display: 'flex',
+                                    alignItems: 'center'
+                                }} >
+                                    <Typography sx={{
+                                        fontSize: { xs: '30px', md: '60px' },
+                                        whiteSpace: 'noWrap',
+                                        color: '#FFFFFF',
+                                        fontWeight: 'bold'
+                                    }}>MY ARTICLES</Typography>
+                                    <Image
+                                        src={spintwo}
+                                        alt='set'
+                                        style={{
+                                            // animation: 'rotate 9s  infinite',
+                                            marginLeft: '10px',
+                                            width: isSmallScreen ? '10%' : 'auto',
+                                            objectFit: 'contain',
+                                            marginRight: isSmallScreen ? '30px' : 'auto'
+                                        }}
+                                    />
+                                </Box>
                             </React.Fragment>
                         ))}
                     </div>
@@ -83,21 +84,30 @@ const Articles = () => {
             </Box>
 
             <Box sx={{
-            width: { xs: '100%', md: '80%' },
-            margin: 'auto',
-        }}>
+                width: { xs: '100%', md: '80%' },
+                margin: 'auto',
+            }}>
                 <motion.div>
+                <Grid container spacing={1}>
                     {articles?.map((item, index) => {
                         return (
-                            <Box key = {index} sx={{ mb: 5}}>
-                                <ArticleCard item = {item} />
-                            </Box>
+                            <Grid 
+                            item 
+                            key={index} 
+                            sx={{ mb: 5, }}
+                            xs= {12} md= {6}
+                            >
+                                <ArticleCard item={item} />
+                            </Grid>
                         )
-                    })  }
+                    })}
+
+                </Grid>
+
                 </motion.div>
             </Box>
-    </Box>
-  )
+        </Box>
+    )
 }
 
 export default Articles

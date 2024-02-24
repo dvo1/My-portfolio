@@ -41,7 +41,7 @@ export const reviews: reviewDataProps[] = [
         name: 'Stephen Olushola',
         stack: 'UI/UX Designer',
         review: 'I have had the pleasure of working with Duro for some time now and his skills are exceptional. Duro is not only proficient in his skills but also a great team player making him a valuable member to your project or team.',
-        path: 'https://www.linkedin.com/in/daniel-funmiluyi'
+        path: 'https://www.linkedin.com/in/stephen-olushola-151a4920b'
     },
 ]
 

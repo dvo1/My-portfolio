@@ -1,4 +1,5 @@
 import dashboard from '../../../public/assets/dashboard.png';
+import buyerTwo from '../../../public/assets/buyertwo.png';
 import elaborate from '../../../public/assets/elaborate.png';
 import port from '../../../public/assets/port.jpg';
 
@@ -11,6 +12,13 @@ interface projectDataProps {
 }
 
 export const projects: projectDataProps[] = [
+    {
+        img: buyerTwo,
+        title: 'E-commerce Buyer Dashboard',
+        desc: 'Babyducts is an ecommerce one stop destination tailored for maternal and baby products, order and get quaility products delivered to you from the comfort of your home.',       
+        tech: ["Typescript", "NextJS", "Material Ui"],
+        path:  'https://babyducts-buyer.vercel.app/',
+    },
     {
         img: dashboard,
         title: 'E-commerce Seller Dashboard',

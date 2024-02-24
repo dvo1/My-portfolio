@@ -12,10 +12,12 @@ const ArticleCard = ({ item }: any) => {
     <Box sx={{
       width: { xs: '80%', md: '90%' },
       margin: 'auto',
+      
     }}>
       <Link href={item?.path} target="_blank" >
         <Box sx={{
-          cursor: 'pointer'
+          cursor: 'pointer',
+          
         }}>
           <Image
             src={item?.img}

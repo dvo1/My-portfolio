@@ -9,7 +9,8 @@ const Contact = () => {
         <Box sx={{
             width: { xs: '80%', md: '80%' },
             margin: 'auto',
-            mt: 9
+            mt: 9,
+            mb: 9
         }} id = "contact">
             <Typography sx={{
                 fontSize: { xs: '50px', md: '100px' },

@@ -262,7 +262,7 @@ const Hero = () => {
                     </Button>
                     </Link>
 
-                    <Button
+                    {/* <Button
                         variant='outlined'
                         disableElevation
                         disableRipple
@@ -281,7 +281,7 @@ const Hero = () => {
                         }}
                     >
                         View my CV
-                    </Button>
+                    </Button> */}
                 </Box>
             </Box>
 
